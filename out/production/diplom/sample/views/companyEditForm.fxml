@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="userEditAnchorPane" prefHeight="340.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.companyEditController">
+   <children>
+      <TextField fx:id="companyName" layoutX="42.0" layoutY="44.0" prefHeight="26.0" prefWidth="292.0" promptText="Назва компанії">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <HBox layoutX="171.0" layoutY="233.0" prefHeight="30.0" prefWidth="203.0" spacing="50.0" />
+      <Button fx:id="bntSave" layoutX="27.0" layoutY="290.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="152.0" text="Зберегти">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="206.0" layoutY="290.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="152.0" text="Відмінити">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <ScrollPane layoutX="42.0" layoutY="82.0" prefHeight="200.0" prefWidth="292.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="contacts" layoutX="1.0" layoutY="8.0" prefHeight="185.0" prefWidth="274.0" promptText="Контакти">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
