@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="editAnchorPane" prefHeight="340.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.printerEditController">
+   <children>
+      <TextField fx:id="txtModel" layoutX="42.0" layoutY="75.0" prefHeight="26.0" prefWidth="292.0" promptText="Марка прінтера">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="bntSave" layoutX="28.0" layoutY="290.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="152.0" text="Зберегти">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="206.0" layoutY="290.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="152.0" text="Відмінити">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <ComboBox fx:id="cmbUser" layoutX="42.0" layoutY="155.0" prefHeight="30.0" prefWidth="292.0" promptText="Користувач" />
+   </children>
+</AnchorPane>

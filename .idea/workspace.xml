@@ -1,7 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/mypackage/controllers/companyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/Company.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/CompanyConst.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/CompanyDatabaseHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/Configs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/UserConst.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/UserDatabaseHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/controllers/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/controllers/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/controllers/UserEditController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/controllers/cartridgeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/controllers/cartridgeEditController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/controllers/companyController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/controllers/companyEditController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/controllers/printerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/controllers/printerEditController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/controllers/zapravkiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/controllers/zapravkiEditController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/views/companyEditForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/views/companyForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/views/mainForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/views/userEditForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/sample/views/usersForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Cartridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/Cartridge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/CartridgeConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/CartridgeConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/CartridgeDatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/CartridgeDatabaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/CompanyConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/CompanyConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/CompanyDatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/CompanyDatabaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/Configs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/PrinterConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/PrinterConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/PrinterDatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/PrinterDatabaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/UserConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/UserConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/UserDatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/UserDatabaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/UserEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/UserEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/cartridgeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/cartridgeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/cartridgeEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/cartridgeEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/companyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/companyEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/companyEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/printerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/printerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/printerEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/printerEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/zapravkiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/zapravkiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/zapravkiEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/zapravkiEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/cartridgeEditForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/cartridgeEditForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/cartridgeForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/cartridgeForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/companyEditForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/companyEditForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/companyForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/companyForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/mainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/mainForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/printerEditForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/printerEditForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/printersForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/printersForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/userEditForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/userEditForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/usersForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/usersForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/zapravkiEditForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/zapravkiEditForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/views/zapravkiForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/zapravkiForm.fxml" afterDir="false" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -56,7 +120,109 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mypackage/views/usersForm.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mypackage/views/userEditForm.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/UserEditController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="54" column="29" lean-forward="true" selection-start-line="53" selection-start-column="6" selection-end-line="54" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mypackage/views/companyForm.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mypackage/views/companyEditForm.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/companyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="47" column="11" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="47" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/companyEditController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mypackage/Company.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="e#291#292#0" expanded="true" />
+                <element signature="e#325#326#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -75,6 +241,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -98,7 +267,6 @@
         <option value="$PROJECT_DIR$/src/sample/CompanyConst.java" />
         <option value="$PROJECT_DIR$/src/sample/companyDatabaseHandler.java" />
         <option value="$PROJECT_DIR$/src/sample/ConnectionSetting.java" />
-        <option value="$PROJECT_DIR$/src/sample/controllers/companyController.java" />
         <option value="$PROJECT_DIR$/src/sample/views/companyForm.fxml" />
         <option value="$PROJECT_DIR$/src/sample/views/companyEditForm.fxml" />
         <option value="$PROJECT_DIR$/src/sample/views/mainForm.fxml" />
@@ -115,6 +283,12 @@
         <option value="$PROJECT_DIR$/src/sample/CartridgeConst.java" />
         <option value="$PROJECT_DIR$/src/sample/PrinterDatabaseHandler.java" />
         <option value="$PROJECT_DIR$/src/sample/CartridgeDatabaseHandler.java" />
+        <option value="$PROJECT_DIR$/src/sample/controllers/companyController.java" />
+        <option value="$PROJECT_DIR$/src/mypackage/controllers/companyController.java" />
+        <option value="$PROJECT_DIR$/src/mypackage/controllers/MainController.java" />
+        <option value="$PROJECT_DIR$/src/mypackage/controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/mypackage/controllers/cartridgeEditController.java" />
+        <option value="$PROJECT_DIR$/src/mypackage/controllers/companyEditController.java" />
       </list>
     </option>
   </component>
@@ -125,6 +299,7 @@
     <option name="width" value="1278" />
     <option name="height" value="690" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -133,7 +308,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,13 +325,20 @@
               <item name="diplom" type="b2602c69:ProjectViewProjectNode" />
               <item name="diplom" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="mypackage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="diplom" type="b2602c69:ProjectViewProjectNode" />
               <item name="diplom" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="mypackage" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="diplom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diplom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mypackage" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -167,7 +349,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -180,7 +362,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1654552149307" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1654639637544" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -236,12 +418,12 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <option name="MAIN_CLASS_NAME" value="mypackage.Main" />
       <module name="diplom" />
       <option name="VM_PARAMETERS" value="--module-path D:\JavaFX\lib --add-modules=javafx.controls,javafx.fxml " />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sample.controllers.*" />
+          <option name="PATTERN" value="mypackage.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -304,16 +486,17 @@
       <workItem from="1654444673893" duration="1468000" />
       <workItem from="1654529064017" duration="2599000" />
       <workItem from="1654546063362" duration="6021000" />
+      <workItem from="1654615511930" duration="7844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32022000" />
+    <option name="totallyTimeSpent" value="39866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15085287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.15245202" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -322,7 +505,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293011" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.12242687" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20043337" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -362,168 +545,52 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/controllers/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/userEditForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-269">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/ConnectionSetting.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/controllers/UserEditController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controllers/companyEditController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controllers/companyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CompanyDatabaseHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/CompanyDatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Configs.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/Configs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/usersForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/views/companyForm1.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/views/companyEditForm1.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/views/companyForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controllers/printerController.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/printerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controllers/printerEditController.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/printerEditController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controllers/cartridgeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controllers/cartridgeEditController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controllers/zapravkiController.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/zapravkiController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controllers/zapravkiEditController.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/zapravkiEditController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/mainForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="79" column="39" lean-forward="true" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/cartridgeEditForm.fxml">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/cartridgeEditForm.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
@@ -531,7 +598,7 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/cartridgeForm.fxml">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/cartridgeForm.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="213" selection-start-line="7" selection-start-column="213" selection-end-line="7" selection-end-column="213" />
@@ -539,7 +606,7 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/printerEditForm.fxml">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/printerEditForm.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
@@ -547,15 +614,7 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/companyEditForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/printersForm.fxml">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/printersForm.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="142" lean-forward="true" selection-start-line="18" selection-start-column="142" selection-end-line="18" selection-end-column="142" />
@@ -563,7 +622,7 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/zapravkiEditForm.fxml">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/zapravkiEditForm.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="97" lean-forward="true" selection-start-line="17" selection-start-column="97" selection-end-line="17" selection-end-column="97" />
@@ -571,7 +630,7 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/zapravkiForm.fxml">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/zapravkiForm.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="58" lean-forward="true" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
@@ -579,21 +638,21 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CompanyConst.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/CompanyConst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CartridgeConst.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/CartridgeConst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Cartridge.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/Cartridge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
@@ -614,28 +673,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/UserConst.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/UserConst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="33" selection-start-line="2" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/UserDatabaseHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/UserDatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/User.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Printer.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/Printer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
@@ -651,24 +710,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/PrinterConst.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/PrinterConst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/PrinterDatabaseHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/PrinterDatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/CartridgeDatabaseHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/mypackage/CartridgeDatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="48" column="53" lean-forward="true" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/mainForm.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/cartridgeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/usersForm.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/userEditForm.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/companyForm.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/cartridgeEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/companyEditForm.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/companyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="47" column="11" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="47" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/UserEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="54" column="29" lean-forward="true" selection-start-line="53" selection-start-column="6" selection-end-line="54" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/companyEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
