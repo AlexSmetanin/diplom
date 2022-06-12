@@ -8,10 +8,12 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import mypackage.UserDatabaseHandler;
 import mypackage.User;
 
 public class UserEditController {
+    private User user;
 
     @FXML
     private ResourceBundle resources;
@@ -35,13 +37,13 @@ public class UserEditController {
     private TextField userOtdel;
 
     @FXML
-    private RadioButton userRoleAdmin;
+    private RadioButton userRoleUser;
 
     @FXML
     private ToggleGroup role;
 
     @FXML
-    private RadioButton userRoleUser;
+    private RadioButton userRoleAdmin;
 
     @FXML
     private Button bntSave;
@@ -51,8 +53,34 @@ public class UserEditController {
 
     @FXML
     void initialize() {
+
        bntSave.setOnAction(event ->
                addNewUser());
+
+       btnCancel.setOnAction(event -> {
+           Stage stage = (Stage) btnCancel.getScene().getWindow();
+           stage.close();
+       });
+    }
+
+    void setUser(User user) {
+        this.user = user;
+        getData();
+    }
+
+    void getData() {
+        System.out.println("Get data...");
+        userFIO.setText(user.getUserName());
+        userLogin.setText(user.getLogin());
+        userPassword.setText(user.getPassword());
+        userOtdel.setText(user.getOtdel());
+        if (user.getRole().equals("admin")) {
+            userRoleAdmin.setSelected(true);
+            userRoleUser.setSelected(false);
+        } else {
+            userRoleAdmin.setSelected(false);
+            userRoleUser.setSelected(true);
+        }
     }
 
     private void addNewUser() {
@@ -67,7 +95,9 @@ public class UserEditController {
         else
             role = "user";
 
-        User user = new User(userName, login, password, otdel, role);
+        User user = new User(login, password, userName, otdel, role);
         dbHandler.addUser(user);
+        Stage stage = (Stage) bntSave.getScene().getWindow();
+        stage.close();
     }
 }

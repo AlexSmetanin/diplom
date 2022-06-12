@@ -14,6 +14,13 @@ public class User {
         this.otdel = otdel;
         this.role = role;
     }
+    public User(Integer id, String login, String password, String userName, String otdel, String role) {
+        this.login = login;
+        this.password = password;
+        this.userName = userName;
+        this.otdel = otdel;
+        this.role = role;
+    }
 
     public String getLogin() {
         return login;

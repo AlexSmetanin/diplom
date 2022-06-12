@@ -80,6 +80,7 @@ public class MainController {
         Parent root = loader.getRoot();
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
+        stage.setResizable(false);
         stage.showAndWait();
         if (flag==1) {
             openNewScene("/mypackage/views/mainForm.fxml", 0);

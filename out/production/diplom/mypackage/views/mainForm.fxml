@@ -12,10 +12,10 @@
             <Image url="@../../../resources/gerb.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnCartridge" layoutX="89.0" layoutY="250.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" text="Картриджи" />
+      <Button fx:id="btnCartridge" layoutX="90.0" layoutY="250.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" text="Картриджи" />
       <Button fx:id="btnUsers" layoutX="612.0" layoutY="250.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" text="Користувачі" />
-      <Button fx:id="btnZapravki" layoutX="306.0" layoutY="293.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="188.0" text="Заправки" />
-      <Button fx:id="btnPrinters" layoutX="89.0" layoutY="363.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" text="Прінтери" />
-      <Button fx:id="btnCompany" layoutX="612.0" layoutY="363.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" text="Компанії" />
+      <Button fx:id="btnZapravki" layoutX="305.0" layoutY="295.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="200.0" text="Заправки" />
+      <Button fx:id="btnPrinters" layoutX="90.0" layoutY="365.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" text="Прінтери" />
+      <Button fx:id="btnCompany" layoutX="612.0" layoutY="365.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" text="Компанії" />
    </children>
 </AnchorPane>

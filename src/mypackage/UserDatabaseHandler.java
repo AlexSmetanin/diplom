@@ -58,4 +58,22 @@ public class UserDatabaseHandler extends Configs {
 
         return resultSet;
     }
+
+    // Get users list from database
+    public ResultSet getAllUsers() {
+        ResultSet resultSet = null;
+
+        String select = "SELECT * FROM " + UserConst.USER_TABLE;
+
+        try {
+            resultSet = getDbConnection().createStatement().executeQuery(select);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
+    }
+
+
 }

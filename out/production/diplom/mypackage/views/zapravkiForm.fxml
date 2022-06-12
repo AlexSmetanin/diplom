@@ -4,8 +4,9 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane accessibleText="Довідник користувачів" prefHeight="404.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.zapravkiController">
+<AnchorPane accessibleText="Довідник користувачів" prefHeight="404.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.zapravkiController">
    <children>
       <TableView fx:id="viewTable" layoutX="14.0" layoutY="14.0" prefHeight="337.0" prefWidth="672.0">
         <columns>
@@ -17,8 +18,22 @@
             <TableColumn prefWidth="125.0" text="Робота" />
         </columns>
       </TableView>
-      <Button fx:id="btnEdit" layoutX="102.0" layoutY="365.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Редагувати" />
-      <Button fx:id="btnAdd" layoutX="295.0" layoutY="365.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Додати" />
-      <Button fx:id="btnDelete" layoutX="489.0" layoutY="365.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Вилучити" />
+      <Button fx:id="btnEdit" layoutX="40.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Редагувати">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="btnAdd" layoutX="209.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Додати">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="btnDelete" layoutX="376.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Вилучити">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="btnReport" layoutX="547.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Звіт">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
