@@ -74,6 +74,4 @@ public class UserDatabaseHandler extends Configs {
         }
         return resultSet;
     }
-
-
 }

@@ -1,6 +1,7 @@
 package mypackage;
 
 public class Printer {
+    private Integer id;
     private String printerModel;
     private Integer userID;
 
@@ -9,8 +10,18 @@ public class Printer {
         this.userID = userID;
     }
 
+    public Printer(Integer id, String printerModel, Integer userID) {
+        this.id = id;
+        this.printerModel = printerModel;
+        this.userID = userID;
+    }
+
     public String getPrinterModel() {
         return printerModel;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public void setPrinterModel(String printerModel) {

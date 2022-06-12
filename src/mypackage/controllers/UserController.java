@@ -28,7 +28,16 @@ public class UserController {
     private ObservableList<User> usersData = FXCollections.observableArrayList();
 
     @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
     private TableView<User> usersTable;
+
+    @FXML
+    private TableColumn<User, Integer> idColumn;
 
     @FXML
     private TableColumn<User, String> fioColumn;
@@ -71,14 +80,12 @@ public class UserController {
         // Редагувати існуючого користувача
         btnEdit.setOnAction(event -> {
             User user = usersTable.getSelectionModel().getSelectedItem();
-            //openNewScene("/mypackage/views/userEditForm.fxml");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/mypackage/views/userEditForm.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            //Parent root = loader.getRoot();
             UserEditController userEditController = loader.getController();
             userEditController.setUser(user);
             Stage stage = new Stage();
@@ -130,11 +137,12 @@ public class UserController {
                     rs.getString("otdel"), rs.getString("role")));
         }
 
-        fioColumn.setCellValueFactory(new PropertyValueFactory<User, String>("userName"));
+        idColumn.setCellValueFactory(   new PropertyValueFactory<User, Integer>("id"));
+        fioColumn.setCellValueFactory(  new PropertyValueFactory<User, String>("userName"));
         loginColumn.setCellValueFactory(new PropertyValueFactory<User, String>("login"));
         passwordColumn.setCellValueFactory(new PropertyValueFactory<User, String>("password"));
         otdelColumn.setCellValueFactory(new PropertyValueFactory<User, String>("otdel"));
-        roleColumn.setCellValueFactory(new PropertyValueFactory<User, String>("role"));
+        roleColumn.setCellValueFactory( new PropertyValueFactory<User, String>("role"));
 
         usersTable.setItems(usersData);
     }

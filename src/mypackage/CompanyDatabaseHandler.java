@@ -18,8 +18,8 @@ public class CompanyDatabaseHandler extends Configs{
 
     // Add new company to database
     public void addCompany(Company company)  {
-        String insert = "INSERT INTO   " + CompanyConst.COMPANY_TABLE + "(" +
-                CompanyConst.COMPANY_NAME + "," + CompanyConst.COMPANY_PHONE +
+        String insert = "INSERT INTO " + CompanyConst.COMPANY_TABLE + "(" +
+                CompanyConst.COMPANY_NAME + "," + CompanyConst.COMPANY_PHONE + ")" +
                 "VALUES(?,?)";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
@@ -33,7 +33,7 @@ public class CompanyDatabaseHandler extends Configs{
         }
     }
 
-    // Get users list from database
+    // Get company list from database
     public ResultSet getCompany(Company company) {
         ResultSet resultSet = null;
 
@@ -51,6 +51,22 @@ public class CompanyDatabaseHandler extends Configs{
             e.printStackTrace();
         }
 
+        return resultSet;
+    }
+
+    // Get company list from database
+    public ResultSet getAllCompany() {
+        ResultSet resultSet = null;
+
+        String select = "SELECT * FROM " + CompanyConst.COMPANY_TABLE;
+
+        try {
+            resultSet = getDbConnection().createStatement().executeQuery(select);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         return resultSet;
     }
 }

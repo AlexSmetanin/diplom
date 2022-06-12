@@ -7,11 +7,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import mypackage.Company;
 import mypackage.CompanyDatabaseHandler;
-import mypackage.User;
 
-public class companyEditController {
+public class CompanyEditController {
+    private Company company;
 
     @FXML
     private ResourceBundle resources;
@@ -23,7 +24,7 @@ public class companyEditController {
     private AnchorPane editAnchorPane;
 
     @FXML
-    private TextField txtCompanyName;
+    private TextField nameField;
 
     @FXML
     private Button bntSave;
@@ -32,18 +33,33 @@ public class companyEditController {
     private Button btnCancel;
 
     @FXML
-    private TextArea txtContacts;
+    private TextArea contactField;
 
     @FXML
     void initialize() {
         bntSave.setOnAction(event ->
                 addNewCompany());
+
+        btnCancel.setOnAction(event -> {
+            Stage stage = (Stage) btnCancel.getScene().getWindow();
+            stage.close();
+        });
+    }
+
+    void setCompany(Company company) {
+        this.company = company;
+        getData();
+    }
+
+    void getData() {
+        nameField.setText(company.getCompanyName());
+        contactField.setText(company.getPhoneNumber());
     }
 
     private void addNewCompany() {
         CompanyDatabaseHandler dbHandler = new CompanyDatabaseHandler();
-        String companyName = txtCompanyName.getText();
-        String phoneNumber = txtContacts.getText();
+        String companyName = nameField.getText();
+        String phoneNumber = contactField.getText();
 
         Company company = new Company(companyName, phoneNumber);
         dbHandler.addCompany(company);

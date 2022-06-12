@@ -4,36 +4,22 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane accessibleText="Довідник користувачів" prefHeight="404.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.zapravkiController">
    <children>
-      <TableView fx:id="viewTable" layoutX="14.0" layoutY="14.0" prefHeight="337.0" prefWidth="672.0">
+      <TableView fx:id="zapravkiTable" layoutX="14.0" layoutY="14.0" prefHeight="337.0" prefWidth="672.0">
         <columns>
-          <TableColumn prefWidth="43.0" text="№" />
-          <TableColumn prefWidth="86.0" text="Дата" />
-            <TableColumn prefWidth="162.0" text="Картрідж" />
-            <TableColumn prefWidth="163.0" text="Компанія" />
-            <TableColumn prefWidth="92.0" text="Сума" />
-            <TableColumn prefWidth="125.0" text="Робота" />
+          <TableColumn fx:id="idColumn" prefWidth="43.0" text="№" />
+          <TableColumn fx:id="dataColumn" prefWidth="86.0" text="Дата" />
+            <TableColumn fx:id="nameColumn" prefWidth="162.0" text="Картрідж" />
+            <TableColumn fx:id="copmanyColumn" prefWidth="163.0" text="Компанія" />
+            <TableColumn fx:id="sumaColumn" prefWidth="92.0" text="Сума" />
+            <TableColumn fx:id="workColumn" prefWidth="125.0" text="Робота" />
         </columns>
       </TableView>
-      <Button fx:id="btnEdit" layoutX="40.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Редагувати">
-         <font>
-            <Font size="14.0" />
-         </font></Button>
-      <Button fx:id="btnAdd" layoutX="209.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Додати">
-         <font>
-            <Font size="14.0" />
-         </font></Button>
-      <Button fx:id="btnDelete" layoutX="376.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Вилучити">
-         <font>
-            <Font size="14.0" />
-         </font></Button>
-      <Button fx:id="btnReport" layoutX="547.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Звіт">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
+      <Button fx:id="btnEdit" layoutX="41.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Редагувати" />
+      <Button fx:id="btnAdd" layoutX="211.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Додати" />
+      <Button fx:id="btnDelete" layoutX="384.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Вилучити" />
+      <Button fx:id="btnReport" layoutX="547.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Звіт" />
    </children>
 </AnchorPane>

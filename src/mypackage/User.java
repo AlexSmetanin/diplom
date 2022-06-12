@@ -1,6 +1,7 @@
 package mypackage;
 
 public class User {
+    private Integer id;
     private String login;
     private String password;
     private String userName;
@@ -60,5 +61,9 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }

@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="editAnchorPane" prefHeight="340.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.printerEditController">
+<AnchorPane fx:id="editAnchorPane" prefHeight="340.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.PrinterEditController">
    <children>
-      <TextField fx:id="txtModel" layoutX="42.0" layoutY="75.0" prefHeight="26.0" prefWidth="292.0" promptText="Марка прінтера">
+      <TextField fx:id="modelField" layoutX="42.0" layoutY="75.0" prefHeight="26.0" prefWidth="292.0" promptText="Марка прінтера">
          <font>
             <Font size="14.0" />
          </font>
@@ -22,6 +22,6 @@
          <font>
             <Font size="14.0" />
          </font></Button>
-      <ComboBox fx:id="cmbUser" layoutX="42.0" layoutY="155.0" prefHeight="30.0" prefWidth="292.0" promptText="Користувач" />
+      <ComboBox fx:id="userField" layoutX="42.0" layoutY="155.0" prefHeight="30.0" prefWidth="292.0" promptText="Користувач" />
    </children>
 </AnchorPane>

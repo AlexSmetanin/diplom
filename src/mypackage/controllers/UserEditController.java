@@ -69,7 +69,6 @@ public class UserEditController {
     }
 
     void getData() {
-        System.out.println("Get data...");
         userFIO.setText(user.getUserName());
         userLogin.setText(user.getLogin());
         userPassword.setText(user.getPassword());

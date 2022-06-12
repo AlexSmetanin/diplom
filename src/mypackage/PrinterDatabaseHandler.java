@@ -53,4 +53,20 @@ public class PrinterDatabaseHandler extends Configs{
 
         return resultSet;
     }
+
+    // Get printer list from database
+    public ResultSet getAllPrinters() {
+        ResultSet resultSet = null;
+
+        String select = "SELECT * FROM " + PrinterConst.PRINTER_TABLE;
+
+        try {
+            resultSet = getDbConnection().createStatement().executeQuery(select);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
+    }
 }

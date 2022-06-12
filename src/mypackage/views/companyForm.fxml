@@ -5,13 +5,13 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane accessibleText="Довідник користувачів" prefHeight="404.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.companyController">
+<AnchorPane accessibleText="Довідник користувачів" prefHeight="404.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.CompanyController">
    <children>
       <TableView fx:id="viewTable" layoutX="14.0" layoutY="14.0" prefHeight="337.0" prefWidth="672.0">
         <columns>
-          <TableColumn fx:id="tblcolID" prefWidth="43.0" text="№" />
-          <TableColumn fx:id="tblcolCompanyName" prefWidth="227.0" text="Компанія" />
-            <TableColumn fx:id="tblcolPhoneNumber" prefWidth="401.0" text="Контакти" />
+          <TableColumn fx:id="idColumn" prefWidth="43.0" text="№" />
+          <TableColumn fx:id="nameColumn" prefWidth="227.0" text="Компанія" />
+            <TableColumn fx:id="contactColumn" prefWidth="401.0" text="Контакти" />
         </columns>
       </TableView>
       <Button fx:id="btnEdit" layoutX="102.0" layoutY="365.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Редагувати" />

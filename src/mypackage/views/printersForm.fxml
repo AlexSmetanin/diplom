@@ -5,13 +5,13 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane accessibleText="Довідник користувачів" prefHeight="404.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.printerController">
+<AnchorPane accessibleText="Довідник користувачів" prefHeight="404.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.PrinterController">
    <children>
-      <TableView fx:id="viewTable" layoutX="14.0" layoutY="14.0" prefHeight="337.0" prefWidth="672.0">
+      <TableView fx:id="printerTable" layoutX="14.0" layoutY="14.0" prefHeight="337.0" prefWidth="672.0">
         <columns>
-          <TableColumn prefWidth="43.0" text="№" />
-          <TableColumn prefWidth="227.0" text="Прінтер" />
-            <TableColumn prefWidth="401.0" text="Користувач" />
+          <TableColumn fx:id="idColumn" prefWidth="43.0" text="№" />
+          <TableColumn fx:id="modelColumn" prefWidth="227.0" text="Прінтер" />
+            <TableColumn fx:id="userColumn" prefWidth="401.0" text="Користувач" />
         </columns>
       </TableView>
       <Button fx:id="btnEdit" layoutX="102.0" layoutY="365.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Редагувати" />

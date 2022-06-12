@@ -9,11 +9,12 @@
    <children>
       <TableView fx:id="usersTable" layoutX="14.0" layoutY="14.0" prefHeight="337.0" prefWidth="672.0">
         <columns>
-          <TableColumn fx:id="fioColumn" prefWidth="229.0" text="П.І.П. користувача" />
-            <TableColumn fx:id="loginColumn" prefWidth="96.0" text="Логін" />
-            <TableColumn fx:id="passwordColumn" prefWidth="101.0" text="Пароль" />
-            <TableColumn fx:id="otdelColumn" prefWidth="145.0" text="Відділ" />
-            <TableColumn fx:id="roleColumn" minWidth="9.0" prefWidth="100.0" text="Роль" />
+            <TableColumn fx:id="idColumn" prefWidth="47.0" text="ID" />
+          <TableColumn fx:id="fioColumn" prefWidth="219.0" text="П.І.П. користувача" />
+            <TableColumn fx:id="loginColumn" prefWidth="91.0" text="Логін" />
+            <TableColumn fx:id="passwordColumn" prefWidth="89.0" text="Пароль" />
+            <TableColumn fx:id="otdelColumn" minWidth="0.0" prefWidth="144.0" text="Відділ" />
+            <TableColumn fx:id="roleColumn" minWidth="9.0" text="Роль" />
         </columns>
       </TableView>
       <Button fx:id="btnEdit" layoutX="102.0" layoutY="365.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="Редагувати" />
