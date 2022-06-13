@@ -64,10 +64,9 @@ public class UserController {
     private Button btnDelete;
 
     @FXML
-    void initialize() throws SQLException{
+    void initialize() throws SQLException {
         initData();
 
-        // Додати нового користувача
         btnAdd.setOnAction(event -> {
             openNewScene("/mypackage/views/userEditForm.fxml");
             try {
@@ -77,7 +76,6 @@ public class UserController {
             }
         });
 
-        // Редагувати існуючого користувача
         btnEdit.setOnAction(event -> {
             User user = usersTable.getSelectionModel().getSelectedItem();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/mypackage/views/userEditForm.fxml"));
@@ -108,8 +106,6 @@ public class UserController {
     }
 
     public void openNewScene(String window) {
-        //btnAdd.getScene().getWindow().hide();
-
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(window));
 

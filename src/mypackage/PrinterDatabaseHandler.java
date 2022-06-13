@@ -19,7 +19,7 @@ public class PrinterDatabaseHandler extends Configs{
     // Add new printer to database
     public void addPrinter(Printer printer)  {
         String insert = "INSERT INTO   " + PrinterConst.PRINTER_TABLE + "(" +
-                PrinterConst.PRINTER_MODEL + "," + PrinterConst.PRINTER_USERID +
+                PrinterConst.PRINTER_MODEL + "," + PrinterConst.PRINTER_USERID + ")" +
                 "VALUES(?,?)";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);

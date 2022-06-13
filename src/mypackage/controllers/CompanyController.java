@@ -67,12 +67,6 @@ public class CompanyController {
             }
         });
 
-        btnDelete.setOnAction(event -> {
-            int answer = JOptionPane.showConfirmDialog(null,
-                    "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
-                    JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
-        });
-
         btnEdit.setOnAction(event -> {
             Company company = viewTable.getSelectionModel().getSelectedItem();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/mypackage/views/companyEditForm.fxml"));
@@ -94,6 +88,12 @@ public class CompanyController {
                 e.printStackTrace();
             }
         });
+
+        btnDelete.setOnAction(event -> {
+            int answer = JOptionPane.showConfirmDialog(null,
+                    "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
+                    JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        });
     }
 
     public void openNewScene(String window) {
@@ -109,6 +109,7 @@ public class CompanyController {
         Parent root = loader.getRoot();
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
+        stage.initModality(Modality.WINDOW_MODAL);
         stage.showAndWait();
     }
 

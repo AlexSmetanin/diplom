@@ -1,27 +1,23 @@
 package mypackage.controllers;
 
-import java.net.URL;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ResourceBundle;
-
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import mypackage.Printer;
 import mypackage.PrinterDatabaseHandler;
-import mypackage.User;
 import mypackage.UserDatabaseHandler;
+
+import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.*;
 
 public class PrinterEditController {
     private Printer printer;
-    private ObservableList<String> users = FXCollections.observableArrayList();
+    Map<Integer, String> userMap = new HashMap<>();
 
     @FXML
     private ResourceBundle resources;
@@ -62,27 +58,36 @@ public class PrinterEditController {
         getData();
     }
 
-    // готуємо дані для табліці
+    // готуємо дані для випадаючого списку корстувачів
     private void initData() throws SQLException {
-        users.clear();
+        userMap.clear();
         UserDatabaseHandler handler = new UserDatabaseHandler();
         ResultSet rs = handler.getAllUsers();
         while (rs.next()) {
             userField.getItems().add(rs.getString("userName"));
+            userMap.put(rs.getInt("id"), rs.getString("userName"));
         }
     }
 
     void getData() {
         modelField.setText(printer.getPrinterModel());
-        userField.getSelectionModel();
+        userField.setValue(userMap.get(printer.getUserID()));
     }
 
     private void addNewPrinter() {
         PrinterDatabaseHandler dbHandler = new PrinterDatabaseHandler();
         String printerModel = modelField.getText();
-        String userID = userField.getValue();
+        Integer userID = 0;
 
-        //Printer printer = new Printer(printerModel, userID);
+        String value = userField.getValue().toString();
+        for(Integer k : userMap.keySet()) {
+           if (userMap.get(k).equals(userField.getValue().toString())) {
+               userID = k;
+               break;
+           }
+        }
+
+        Printer printer = new Printer(printerModel, userID);
         dbHandler.addPrinter(printer);
         Stage stage = (Stage) bntSave.getScene().getWindow();
         stage.close();

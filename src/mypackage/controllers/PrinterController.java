@@ -23,6 +23,8 @@ import mypackage.PrinterDatabaseHandler;
 import mypackage.User;
 import mypackage.UserDatabaseHandler;
 
+import javax.swing.*;
+
 public class PrinterController {
 
     private ObservableList<Printer> printerData = FXCollections.observableArrayList();
@@ -58,7 +60,7 @@ public class PrinterController {
     void initialize() throws SQLException {
         initData();
 
-        // Додати нового користувача
+        // Додати новий принтер
         btnAdd.setOnAction(event -> {
             openNewScene("/mypackage/views/printerEditForm.fxml");
             try {
@@ -67,11 +69,38 @@ public class PrinterController {
                 e.printStackTrace();
             }
         });
+
+        // Редагувати існуючий принтер
+        btnEdit.setOnAction(event -> {
+            Printer printer = printerTable.getSelectionModel().getSelectedItem();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mypackage/views/printerEditForm.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            PrinterEditController printerEditController = loader.getController();
+            printerEditController.setPrinter(printer);
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.getRoot()));
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.showAndWait();
+
+            try {
+                initData();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        });
+
+        btnDelete.setOnAction(event -> {
+            int answer = JOptionPane.showConfirmDialog(null,
+                    "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
+                    JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        });
     }
 
     public void openNewScene(String window) {
-        //btnAdd.getScene().getWindow().hide();
-
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(window));
 
@@ -87,6 +116,7 @@ public class PrinterController {
         stage.initModality(Modality.WINDOW_MODAL);
         stage.showAndWait();
     }
+
     private void initData() throws SQLException {
         printerData.clear();
         PrinterDatabaseHandler handler = new PrinterDatabaseHandler();

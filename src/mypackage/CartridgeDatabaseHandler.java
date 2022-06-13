@@ -20,7 +20,7 @@ public class CartridgeDatabaseHandler extends Configs{
     public void addCartridge(Cartridge cartridge)  {
         String insert = "INSERT INTO   " + CartridgeConst.CARTRIDGE_TABLE + "(" +
                 CartridgeConst.CARTRIDGE_NOMER + "," + CartridgeConst.CARTRIDGE_MODEL + "," +
-                CartridgeConst.CARTRIDGE_PRINTERID +
+                CartridgeConst.CARTRIDGE_PRINTERID + ")" +
                 "VALUES(?,?,?)";
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
@@ -54,6 +54,21 @@ public class CartridgeDatabaseHandler extends Configs{
             e.printStackTrace();
         }
 
+        return resultSet;
+    }
+
+    public ResultSet getAllCartridge() {
+        ResultSet resultSet = null;
+
+        String select = "SELECT * FROM " + CartridgeConst.CARTRIDGE_TABLE;
+
+        try {
+            resultSet = getDbConnection().createStatement().executeQuery(select);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         return resultSet;
     }
 }

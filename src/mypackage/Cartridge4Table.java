@@ -1,22 +1,22 @@
 package mypackage;
 
-public class Cartridge {
+public class Cartridge4Table {
     private Integer id;
     private Integer nomer;
     private String model;
-    private Integer printerID;
+    private String printer;
 
-    public Cartridge(Integer nomer, String model, Integer printerID) {
+    public Cartridge4Table(Integer nomer, String model, String printer) {
         this.nomer = nomer;
         this.model = model;
-        this.printerID = printerID;
+        this.printer = printer;
     }
 
-    public Cartridge(Integer id, Integer nomer, String model, Integer printerID) {
+    public Cartridge4Table(Integer id, Integer nomer, String model, String printer) {
         this.id = id;
         this.nomer = nomer;
         this.model = model;
-        this.printerID = printerID;
+        this.printer = printer;
     }
 
     public Integer getNomer() {
@@ -35,12 +35,12 @@ public class Cartridge {
         this.model = model;
     }
 
-    public Integer getPrinterID() {
-        return printerID;
+    public String getPrinter() {
+        return printer;
     }
 
-    public void setPrinterID(Integer printerID) {
-        this.printerID = printerID;
+    public void setPrinter(String printer) {
+        this.printer = printer;
     }
 
     public Integer getId() {

@@ -63,5 +63,7 @@ public class CompanyEditController {
 
         Company company = new Company(companyName, phoneNumber);
         dbHandler.addCompany(company);
+        Stage stage = (Stage) bntSave.getScene().getWindow();
+        stage.close();
     }
 }
