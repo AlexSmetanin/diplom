@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -18,16 +20,14 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import mypackage.Printer;
-import mypackage.PrinterDatabaseHandler;
-import mypackage.User;
-import mypackage.UserDatabaseHandler;
+import mypackage.*;
 
 import javax.swing.*;
 
 public class PrinterController {
 
-    private ObservableList<Printer> printerData = FXCollections.observableArrayList();
+    private ObservableList<Printer4Table> printerData = FXCollections.observableArrayList();
+    Map<Integer, String> userMap = new HashMap<>();
 
     @FXML
     private ResourceBundle resources;
@@ -36,16 +36,16 @@ public class PrinterController {
     private URL location;
 
     @FXML
-    private TableView<Printer> printerTable;
+    private TableView<Printer4Table> printerTable;
 
     @FXML
-    private TableColumn<Printer, Integer> idColumn;
+    private TableColumn<Printer4Table, Integer> idColumn;
 
     @FXML
-    private TableColumn<Printer, String> modelColumn;
+    private TableColumn<Printer4Table, String> modelColumn;
 
     @FXML
-    private TableColumn<Printer, Integer> userColumn;
+    private TableColumn<Printer4Table, String> userColumn;
 
     @FXML
     private Button btnEdit;
@@ -58,6 +58,7 @@ public class PrinterController {
 
     @FXML
     void initialize() throws SQLException {
+        initDataUsers();
         initData();
 
         // Додати новий принтер
@@ -72,7 +73,7 @@ public class PrinterController {
 
         // Редагувати існуючий принтер
         btnEdit.setOnAction(event -> {
-            Printer printer = printerTable.getSelectionModel().getSelectedItem();
+            Printer4Table printer4Table = printerTable.getSelectionModel().getSelectedItem();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/mypackage/views/printerEditForm.fxml"));
             try {
                 loader.load();
@@ -80,7 +81,7 @@ public class PrinterController {
                 e.printStackTrace();
             }
             PrinterEditController printerEditController = loader.getController();
-            printerEditController.setPrinter(printer);
+            printerEditController.setPrinter(printer4Table);
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.getRoot()));
             stage.initModality(Modality.WINDOW_MODAL);
@@ -98,6 +99,15 @@ public class PrinterController {
                     "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
                     JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
         });
+    }
+
+    private void initDataUsers() throws SQLException {
+        userMap.clear();
+        UserDatabaseHandler handler = new UserDatabaseHandler();
+        ResultSet rs = handler.getAllUsers();
+        while (rs.next()) {
+            userMap.put(rs.getInt("id"), rs.getString("userName"));
+        }
     }
 
     public void openNewScene(String window) {
@@ -122,13 +132,13 @@ public class PrinterController {
         PrinterDatabaseHandler handler = new PrinterDatabaseHandler();
         ResultSet rs = handler.getAllPrinters();
         while (rs.next()) {
-            printerData.add(new Printer(rs.getInt("id"), rs.getString("printerModel"),
-                    rs.getInt("userID")));
+            printerData.add(new Printer4Table(rs.getInt("id"), rs.getString("printerModel"),
+                    userMap.get(rs.getInt("userID"))));
         }
 
-        idColumn.setCellValueFactory(   new PropertyValueFactory<Printer, Integer>("id"));
-        modelColumn.setCellValueFactory(  new PropertyValueFactory<Printer, String>("printerModel"));
-        userColumn.setCellValueFactory(new PropertyValueFactory<Printer, Integer>("userID"));
+        idColumn.setCellValueFactory(   new PropertyValueFactory<Printer4Table, Integer>("id"));
+        modelColumn.setCellValueFactory(  new PropertyValueFactory<Printer4Table, String>("printerModel"));
+        userColumn.setCellValueFactory(new PropertyValueFactory<Printer4Table, String>("user"));
 
         printerTable.setItems(printerData);
     }

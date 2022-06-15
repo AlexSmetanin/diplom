@@ -35,7 +35,7 @@ public class CartridgeDatabaseHandler extends Configs{
         }
     }
 
-    // Get users list from database
+    // Get cartridge list from database
     public ResultSet getCartridge(Cartridge cartridge) {
         ResultSet resultSet = null;
 

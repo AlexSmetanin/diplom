@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import mypackage.Printer;
+import mypackage.Printer4Table;
 import mypackage.PrinterDatabaseHandler;
 import mypackage.UserDatabaseHandler;
 
@@ -17,6 +18,7 @@ import java.util.*;
 
 public class PrinterEditController {
     private Printer printer;
+    private Printer4Table printer4Table;
     Map<Integer, String> userMap = new HashMap<>();
 
     @FXML
@@ -53,8 +55,8 @@ public class PrinterEditController {
         });
     }
 
-    void setPrinter(Printer printer) {
-        this.printer = printer;
+    void setPrinter(Printer4Table printer4Table) {
+        this.printer4Table = printer4Table;
         getData();
     }
 
@@ -70,8 +72,8 @@ public class PrinterEditController {
     }
 
     void getData() {
-        modelField.setText(printer.getPrinterModel());
-        userField.setValue(userMap.get(printer.getUserID()));
+        modelField.setText(printer4Table.getPrinterModel());
+        userField.setValue(printer4Table.getUser());
     }
 
     private void addNewPrinter() {

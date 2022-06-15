@@ -14,6 +14,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import mypackage.Cartridge;
 import mypackage.Cartridge4Table;
+import mypackage.CartridgeDatabaseHandler;
 import mypackage.PrinterDatabaseHandler;
 
 public class cartridgeEditController {
@@ -59,7 +60,23 @@ public class cartridgeEditController {
     }
 
     private void addNewCartridge() {
+        CartridgeDatabaseHandler cartridgeDatabaseHandler = new CartridgeDatabaseHandler();
+        Integer nom =  Integer.parseInt(nomer.getText());
+        String mod = model.getText();
+        Integer printerID = 0;
 
+        String value = printerComboBox.getValue().toString();
+        for(Integer k : printerMap.keySet()) {
+            if (printerMap.get(k).equals(printerComboBox.getValue().toString())) {
+                printerID = k;
+                break;
+            }
+        }
+
+        Cartridge cartridge = new Cartridge(nom, mod, printerID);
+        cartridgeDatabaseHandler.addCartridge(cartridge);
+        Stage stage = (Stage) bntSave.getScene().getWindow();
+        stage.close();
     }
 
     void setCartridge(Cartridge4Table cartridge4Table) {
@@ -69,13 +86,9 @@ public class cartridgeEditController {
 
 
     void getData() {
-        System.out.println("Start...");
         nomer.setText(cartridge4Table.getNomer().toString());
-        System.out.println("1");
         model.setText(cartridge4Table.getModel());
-        System.out.println("2");
         printerComboBox.setValue(printerMap.get(cartridge4Table.getId()));
-        System.out.println("3");
     }
 
     // готуємо дані для випадаючого списку принтерів
