@@ -2,27 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ed392a4-762b-4fce-90df-a6f089577429" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/itextpdf_5_5_13_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/itextpdf-5.5.13.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/times.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/timesbd.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/timesbi.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/timesi.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diplom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/diplom.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/cartridgeEditController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/cartridgeEditController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/printerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/printerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/printerEditController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/printerEditController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/zapravkiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/zapravkiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/zapravkiEditController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/zapravkiEditController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/views/zapravkiEditForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/diplom/mypackage/views/zapravkiEditForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mypackage/CartridgeDatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/CartridgeDatabaseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mypackage/controllers/PrinterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/PrinterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mypackage/controllers/PrinterEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/PrinterEditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mypackage/controllers/cartridgeEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/cartridgeEditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mypackage/controllers/zapravkiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/zapravkiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mypackage/controllers/zapravkiEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/zapravkiEditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mypackage/views/zapravkiEditForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/zapravkiEditForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/diplom/mypackage/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/diplom/mypackage/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/UserDatabaseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/diplom/mypackage/UserDatabaseHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/diplom/mypackage/controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/diplom/mypackage/views/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mypackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mypackage/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mypackage/UserDatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/UserDatabaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mypackage/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mypackage/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mypackage/views/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mypackage/views/loginForm.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,32 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/ZvitController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-371">
-              <caret line="118" column="24" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mypackage/OpenFilePDF.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,7 +37,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="13.06.2022" />
+        <entry key="$PROJECT_DIR$" value="15.06.2022" />
       </map>
     </option>
   </component>
@@ -78,7 +45,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/mypackage/controllers/PrinterEditController.java" />
-        <option value="$PROJECT_DIR$/src/mypackage/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/src/mypackage/controllers/CompanyEditController.java" />
         <option value="$PROJECT_DIR$/src/mypackage/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/mypackage/controllers/CompanyController.java" />
@@ -91,8 +57,15 @@
         <option value="$PROJECT_DIR$/src/mypackage/controllers/cartridgeEditController.java" />
         <option value="$PROJECT_DIR$/src/mypackage/controllers/zapravkiController.java" />
         <option value="$PROJECT_DIR$/src/mypackage/ZapravkiDatabaseHandler.java" />
-        <option value="$PROJECT_DIR$/src/mypackage/OpenFilePDF.java" />
         <option value="$PROJECT_DIR$/src/mypackage/controllers/ZvitController.java" />
+        <option value="$PROJECT_DIR$/src/mypackage/OpenFilePDF.java" />
+        <option value="$PROJECT_DIR$/src/mypackage/User.java" />
+        <option value="$PROJECT_DIR$/src/mypackage/UserDatabaseHandler.java" />
+        <option value="$PROJECT_DIR$/src/mypackage/views/loginForm.fxml" />
+        <option value="$PROJECT_DIR$/src/mypackage/views/mainForm.fxml" />
+        <option value="$PROJECT_DIR$/src/mypackage/Main.java" />
+        <option value="$PROJECT_DIR$/src/mypackage/controllers/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/mypackage/controllers/MainController.java" />
       </list>
     </option>
   </component>
@@ -110,6 +83,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,14 +126,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1655153829440" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1655496486894" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/itextpdf-5.5.13.3.jar!/" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -216,7 +189,8 @@
       <workItem from="1655128602285" duration="164000" />
       <workItem from="1655130190799" duration="714000" />
       <workItem from="1655136698697" duration="10518000" />
-      <workItem from="1655303441318" duration="14324000" />
+      <workItem from="1655303441318" duration="14482000" />
+      <workItem from="1655488561150" duration="6850000" />
     </task>
     <task id="LOCAL-00001" summary="Cartridge almost done">
       <created>1655153808054</created>
@@ -225,17 +199,23 @@
       <option name="project" value="LOCAL" />
       <updated>1655153808054</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Zapravki almost done, zvit done">
+      <created>1655321701028</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655321701028</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25720000" />
+    <option name="totallyTimeSpent" value="32728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26012793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -244,7 +224,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -302,19 +282,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cartridge almost done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cartridge almost done" />
+    <MESSAGE value="Zapravki almost done, zvit done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zapravki almost done, zvit done" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mypackage/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/UserEditController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1081">
@@ -444,16 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/cartridgeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/PrinterController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -489,17 +450,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mypackage/OpenFilePDF.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -508,11 +462,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/ZvitController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-371">
+        <state relative-caret-position="2006">
           <caret line="118" column="24" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/UserDatabaseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="49" column="47" lean-forward="true" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/UserConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/cartridgeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="92" column="34" selection-start-line="81" selection-start-column="8" selection-end-line="94" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/loginForm.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/views/mainForm.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="85" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="67" column="64" lean-forward="true" selection-start-line="67" selection-start-column="64" selection-end-line="67" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mypackage/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
         </state>
       </provider>
     </entry>

@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class MainController {
+    public static boolean isRoleUser;
 
     @FXML
     private ResourceBundle resources;
@@ -40,6 +41,10 @@ public class MainController {
 
     @FXML
     void initialize() {
+        if (isRoleUser) {
+            btnUsers.setDisable(true);
+        }
+
         imgView.setImage(
                 new Image("file:../../resources/gerb.png")
         );

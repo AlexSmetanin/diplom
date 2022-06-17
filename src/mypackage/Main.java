@@ -11,9 +11,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("views/mainForm.fxml"));
-        primaryStage.setTitle("Облік картриджів в Черкаському політехнічному фаховому коледжі");
-        primaryStage.setScene(new Scene(root, 800, 500));
+        Parent root = FXMLLoader.load(getClass().getResource("views/loginForm.fxml"));
+        primaryStage.setTitle("Облік картриджів");
+        primaryStage.setScene(new Scene(root, 290, 320));
         primaryStage.getIcons().add(new Image("file:resources/images/printer2.png"));
         primaryStage.show();
     }

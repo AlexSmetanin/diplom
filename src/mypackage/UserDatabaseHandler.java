@@ -43,11 +43,11 @@ public class UserDatabaseHandler extends Configs {
         ResultSet resultSet = null;
 
         String select = "SELECT * FROM " + UserConst.USER_TABLE + " WHERE " +
-                UserConst.USER_NAME + "=? AND " + UserConst.USER_PASSWORD + "=?";
+                UserConst.USER_LOGIN + "=? AND " + UserConst.USER_PASSWORD + "=?";
 
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
-            prSt.setString(1, user.getUserName());
+            prSt.setString(1, user.getLogin());
             prSt.setString(2, user.getPassword());
             resultSet = prSt.executeQuery();
         } catch (SQLException e) {
