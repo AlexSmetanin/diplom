@@ -69,4 +69,37 @@ public class CompanyDatabaseHandler extends Configs{
         }
         return resultSet;
     }
+
+    // Delete company
+    public void deleteCompany(Integer id) {
+        String delete = "DELETE FROM " + CompanyConst.COMPANY_TABLE +
+                " WHERE " + CompanyConst.COMPANY_ID + " = ?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(delete);
+            prSt.setInt(1, id);
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Edit company
+    public void editCompany(Company company) {
+        String update = "UPDATE " + CompanyConst.COMPANY_TABLE + " SET " +
+                CompanyConst.COMPANY_NAME + " = ?," + CompanyConst.COMPANY_PHONE + " = ?" +
+                " WHERE " + CompanyConst.COMPANY_ID + " = ?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(update);
+            prSt.setString(1, company.getCompanyName());
+            prSt.setString(2, company.getPhoneNumber());
+            prSt.setInt(3, company.getId());
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }

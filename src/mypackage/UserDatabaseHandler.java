@@ -16,7 +16,7 @@ public class UserDatabaseHandler extends Configs {
         return dbConnection;
     }
 
-    // Add new user to database
+    // Додати нового користувача в базу даних
     public void addUser(User user)  {
         String insert = "INSERT INTO   " + UserConst.USER_TABLE + "(" +
                 UserConst.USER_LOGIN + "," + UserConst.USER_PASSWORD + "," +
@@ -38,7 +38,7 @@ public class UserDatabaseHandler extends Configs {
         }
     }
 
-    // Get users list from database
+    // Отримати користувача з певним логіном та паролем
     public ResultSet getUser(User user) {
         ResultSet resultSet = null;
 
@@ -59,7 +59,7 @@ public class UserDatabaseHandler extends Configs {
         return resultSet;
     }
 
-    // Get users list from database
+    // Отримати список всіх користувачів з бази даних
     public ResultSet getAllUsers() {
         ResultSet resultSet = null;
 
@@ -73,5 +73,44 @@ public class UserDatabaseHandler extends Configs {
             e.printStackTrace();
         }
         return resultSet;
+    }
+
+    // Редагувати дані користувача в базі даних
+    public void editUser(User user) {
+        String update = "UPDATE " + UserConst.USER_TABLE + " SET " +
+                UserConst.USER_LOGIN + " = ?," + UserConst.USER_PASSWORD + " = ?," +
+                UserConst.USER_NAME + " = ?," +  UserConst.USER_OTDEL + " = ?," +
+                UserConst.USER_ROLE + " = ?" +
+                " WHERE " + UserConst.USER_ID + " = ?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(update);
+            prSt.setString(1, user.getLogin());
+            prSt.setString(2, user.getPassword());
+            prSt.setString(3, user.getUserName());
+            prSt.setString(4, user.getOtdel());
+            prSt.setString(5, user.getRole());
+            prSt.setInt(6, user.getId());
+
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Вилучити користувача з бази даних
+    public void deleteUser(Integer id) {
+        String delete = "DELETE FROM " + UserConst.USER_TABLE +
+                " WHERE " + UserConst.USER_ID + " = ?";
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(delete);
+            prSt.setInt(1, id);
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

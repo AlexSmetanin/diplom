@@ -89,6 +89,7 @@ public class cartridgeController {
             }
             cartridgeEditController cartridgeEditController = new cartridgeEditController();
             cartridgeEditController.setCartridge(cartridge4Table);
+            cartridgeEditController.editMode = true;
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.getRoot()));
             stage.initModality(Modality.WINDOW_MODAL);
@@ -103,12 +104,15 @@ public class cartridgeController {
 
         // Видалити картридж
         btnDelete.setOnAction(event -> {
-            int answer = JOptionPane.showConfirmDialog(null,
-                    "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
-                    JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            try {
+                deleteCartridge();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         });
     }
 
+    // Get data for table
     private void initData() throws SQLException {
         cartridgeData.clear();
         CartridgeDatabaseHandler handler = new CartridgeDatabaseHandler();
@@ -136,6 +140,7 @@ public class cartridgeController {
         }
     }
 
+    // Open new window
     public void openNewScene(String window) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(window));
@@ -151,5 +156,31 @@ public class cartridgeController {
         stage.setScene(new Scene(root));
         stage.initModality(Modality.WINDOW_MODAL);
         stage.showAndWait();
+    }
+
+    // Delete cartridge
+    private void deleteCartridge() throws SQLException {
+        int answer = JOptionPane.showConfirmDialog(null,
+                "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
+                JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        if (answer == 0) {
+            Cartridge4Table cartridge4Table = cartridgeTable.getSelectionModel().getSelectedItem();
+            int id = cartridge4Table.getId();
+            ZapravkiDatabaseHandler zapravkiDatabaseHandler= new ZapravkiDatabaseHandler();
+            ResultSet rs = zapravkiDatabaseHandler.getZapravkiByCartridgeID(id);
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(null,
+                        "Не можна видаляти запис, на який є посилання?", "Помилка!",
+                        JOptionPane.ERROR_MESSAGE);
+            } else {
+                CartridgeDatabaseHandler cartridgeDatabaseHandler = new CartridgeDatabaseHandler();
+                cartridgeDatabaseHandler.deleteCartridge(id);
+                try {
+                    initData();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }

@@ -21,6 +21,8 @@ public class cartridgeEditController {
     private Cartridge cartridge;
     private Cartridge4Table cartridge4Table;
     Map<Integer, String> printerMap = new HashMap<>();
+    public static boolean editMode;
+    private int id;
 
     @FXML
     private ResourceBundle resources;
@@ -51,7 +53,7 @@ public class cartridgeEditController {
         initData();
 
         bntSave.setOnAction(event ->
-                addNewCartridge());
+                saveCartridge());
 
         btnCancel.setOnAction(event -> {
             Stage stage = (Stage) btnCancel.getScene().getWindow();
@@ -59,7 +61,7 @@ public class cartridgeEditController {
         });
     }
 
-    private void addNewCartridge() {
+    private void saveCartridge() {
         CartridgeDatabaseHandler cartridgeDatabaseHandler = new CartridgeDatabaseHandler();
         Integer nom =  Integer.parseInt(nomer.getText());
         String mod = model.getText();
@@ -73,8 +75,15 @@ public class cartridgeEditController {
             }
         }
 
-        Cartridge cartridge = new Cartridge(nom, mod, printerID);
-        cartridgeDatabaseHandler.addCartridge(cartridge);
+        if (editMode) {
+            Cartridge cartridge = new Cartridge(id, nom, mod, printerID);
+            cartridgeDatabaseHandler.editCartridge(cartridge);
+        } else {
+            Cartridge cartridge = new Cartridge(nom, mod, printerID);
+            cartridgeDatabaseHandler.addCartridge(cartridge);
+        }
+
+
         Stage stage = (Stage) bntSave.getScene().getWindow();
         stage.close();
     }
@@ -89,6 +98,7 @@ public class cartridgeEditController {
         nomer.setText(cartridge4Table.getNomer().toString());
         model.setText(cartridge4Table.getModel());
         printerComboBox.setValue(printerMap.get(cartridge4Table.getId()));
+        id = cartridge4Table.getId();
     }
 
     // готуємо дані для випадаючого списку принтерів

@@ -18,6 +18,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import mypackage.PrinterDatabaseHandler;
 import mypackage.User;
 import mypackage.UserDatabaseHandler;
 
@@ -86,6 +87,7 @@ public class UserController {
             }
             UserEditController userEditController = loader.getController();
             userEditController.setUser(user);
+            UserEditController.editMode = true;
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.getRoot()));
             stage.initModality(Modality.WINDOW_MODAL);
@@ -99,9 +101,11 @@ public class UserController {
         });
 
         btnDelete.setOnAction(event -> {
-            int answer = JOptionPane.showConfirmDialog(null,
-                    "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
-                    JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            try {
+                deleteUser();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         });
     }
 
@@ -141,5 +145,30 @@ public class UserController {
         roleColumn.setCellValueFactory( new PropertyValueFactory<User, String>("role"));
 
         usersTable.setItems(usersData);
+    }
+
+    private void deleteUser() throws SQLException {
+        int answer = JOptionPane.showConfirmDialog(null,
+                "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
+                JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        if (answer == 0) {
+            User user = usersTable.getSelectionModel().getSelectedItem();
+            int id = user.getId();
+            PrinterDatabaseHandler printerDatabaseHandler = new PrinterDatabaseHandler();
+            ResultSet rs = printerDatabaseHandler.getPrinterByUserID(id);
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(null,
+                        "Не можна видаляти запис, на який є посилання?", "Помилка!",
+                        JOptionPane.ERROR_MESSAGE);
+            } else {
+                UserDatabaseHandler userDatabaseHandler = new UserDatabaseHandler();
+                userDatabaseHandler.deleteUser(id);
+                try {
+                    initData();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }

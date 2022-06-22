@@ -20,6 +20,8 @@ public class PrinterEditController {
     private Printer printer;
     private Printer4Table printer4Table;
     Map<Integer, String> userMap = new HashMap<>();
+    public static boolean editMode;
+    private int id;
 
     @FXML
     private ResourceBundle resources;
@@ -47,17 +49,12 @@ public class PrinterEditController {
         initData();
 
         bntSave.setOnAction(event ->
-                addNewPrinter());
+                savePrinter());
 
         btnCancel.setOnAction(event -> {
             Stage stage = (Stage) btnCancel.getScene().getWindow();
             stage.close();
         });
-    }
-
-    void setPrinter(Printer4Table printer4Table) {
-        this.printer4Table = printer4Table;
-        getData();
     }
 
     // готуємо дані для випадаючого списку корстувачів
@@ -71,12 +68,18 @@ public class PrinterEditController {
         }
     }
 
+    void setPrinter(Printer4Table printer4Table) {
+        this.printer4Table = printer4Table;
+        getData();
+    }
+
     void getData() {
         modelField.setText(printer4Table.getPrinterModel());
         userField.setValue(printer4Table.getUser());
+        id = printer4Table.getId();
     }
 
-    private void addNewPrinter() {
+    private void savePrinter() {
         PrinterDatabaseHandler dbHandler = new PrinterDatabaseHandler();
         String printerModel = modelField.getText();
         Integer userID = 0;
@@ -89,8 +92,13 @@ public class PrinterEditController {
            }
         }
 
-        Printer printer = new Printer(printerModel, userID);
-        dbHandler.addPrinter(printer);
+        if (editMode) {
+            Printer printer = new Printer(id, printerModel, userID);
+            dbHandler.editPrinter(printer);
+        } else {
+            Printer printer = new Printer(printerModel, userID);
+            dbHandler.addPrinter(printer);
+        }
         Stage stage = (Stage) bntSave.getScene().getWindow();
         stage.close();
     }

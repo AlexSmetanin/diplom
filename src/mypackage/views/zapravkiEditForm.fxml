@@ -6,36 +6,43 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="editAnchorPane" prefHeight="444.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.zapravkiEditController">
+<AnchorPane fx:id="editAnchorPane" prefHeight="453.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mypackage.controllers.zapravkiEditController">
    <children>
-      <DatePicker fx:id="dateField" layoutX="36.0" layoutY="28.0" prefHeight="30.0" prefWidth="320.0" promptText="Дата" />
-      <ComboBox fx:id="cartridgeComboBox" layoutX="35.0" layoutY="72.0" prefHeight="30.0" prefWidth="320.0" promptText="Картридж" />
-      <ComboBox fx:id="companyComboBox" layoutX="35.0" layoutY="123.0" prefHeight="30.0" prefWidth="320.0" promptText="Компанія" />
+      <DatePicker fx:id="dateField" layoutX="36.0" layoutY="28.0" prefHeight="30.0" prefWidth="320.0" promptText="Дата" style="-fx-font-size: 16"/>
+      <ComboBox fx:id="cartridgeComboBox" layoutX="35.0" layoutY="72.0" prefHeight="30.0" prefWidth="320.0" promptText="Картридж" style="-fx-font-size: 16"/>
+      <ComboBox fx:id="companyComboBox" layoutX="35.0" layoutY="123.0" prefHeight="30.0" prefWidth="320.0" promptText="Компанія" style="-fx-font-size: 16"/>
       <TextField fx:id="sumaField" layoutX="35.0" layoutY="170.0" prefHeight="30.0" prefWidth="320.0" promptText="Сума">
          <font>
-            <Font size="14.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
       <ScrollPane layoutX="35.0" layoutY="216.0" prefHeight="158.0" prefWidth="320.0">
          <content>
             <TextArea fx:id="workField" prefHeight="158.0" prefWidth="305.0" promptText="Виконана робота">
                <font>
-                  <Font size="14.0" />
+                  <Font size="16.0" />
                </font>
             </TextArea>
          </content>
       </ScrollPane>
       <Button fx:id="bntSave" layoutX="35.0" layoutY="393.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="152.0" text="Зберегти">
          <font>
-            <Font size="14.0" />
+            <Font size="20.0" />
          </font>
+         <effect>
+            <InnerShadow />
+         </effect>
       </Button>
       <Button fx:id="btnCancel" layoutX="203.0" layoutY="393.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="152.0" text="Відмінити">
          <font>
-            <Font size="14.0" />
-         </font></Button>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
    </children>
 </AnchorPane>

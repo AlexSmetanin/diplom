@@ -18,8 +18,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import mypackage.Company;
-import mypackage.CompanyDatabaseHandler;
+import mypackage.*;
 
 import javax.swing.*;
 
@@ -77,6 +76,7 @@ public class CompanyController {
             }
             CompanyEditController companyEditController = loader.getController();
             companyEditController.setCompany(company);
+            CompanyEditController.editMode = true;
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.getRoot()));
             stage.initModality(Modality.WINDOW_MODAL);
@@ -90,9 +90,11 @@ public class CompanyController {
         });
 
         btnDelete.setOnAction(event -> {
-            int answer = JOptionPane.showConfirmDialog(null,
-                    "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
-                    JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            try {
+                deleteCompany();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         });
     }
 
@@ -128,5 +130,30 @@ public class CompanyController {
         contactColumn.setCellValueFactory(new PropertyValueFactory<Company, String>("phoneNumber"));
 
         viewTable.setItems(companyData);
+    }
+
+    private void deleteCompany() throws SQLException {
+        int answer = JOptionPane.showConfirmDialog(null,
+                "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
+                JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        if (answer == 0) {
+            Company company = viewTable.getSelectionModel().getSelectedItem();
+            int id = company.getId();
+            ZapravkiDatabaseHandler zapravkiDatabaseHandler = new ZapravkiDatabaseHandler();
+            ResultSet rs = zapravkiDatabaseHandler.getZapravkiByCompanyID(id);
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(null,
+                        "Не можна видаляти запис, на який є посилання?", "Помилка!",
+                        JOptionPane.ERROR_MESSAGE);
+            } else {
+                CompanyDatabaseHandler companyDatabaseHandler = new CompanyDatabaseHandler();
+                companyDatabaseHandler.deleteCompany(id);
+                try {
+                    initData();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }

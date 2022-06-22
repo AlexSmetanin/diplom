@@ -13,6 +13,8 @@ import mypackage.CompanyDatabaseHandler;
 
 public class CompanyEditController {
     private Company company;
+    public static boolean editMode;
+    private Integer id;
 
     @FXML
     private ResourceBundle resources;
@@ -38,7 +40,7 @@ public class CompanyEditController {
     @FXML
     void initialize() {
         bntSave.setOnAction(event ->
-                addNewCompany());
+                saveCompany());
 
         btnCancel.setOnAction(event -> {
             Stage stage = (Stage) btnCancel.getScene().getWindow();
@@ -54,15 +56,21 @@ public class CompanyEditController {
     void getData() {
         nameField.setText(company.getCompanyName());
         contactField.setText(company.getPhoneNumber());
+        id = company.getId();
     }
 
-    private void addNewCompany() {
+    private void saveCompany() {
         CompanyDatabaseHandler dbHandler = new CompanyDatabaseHandler();
         String companyName = nameField.getText();
         String phoneNumber = contactField.getText();
 
-        Company company = new Company(companyName, phoneNumber);
-        dbHandler.addCompany(company);
+        if (editMode) {
+            Company company = new Company(id, companyName, phoneNumber);
+            dbHandler.editCompany(company);
+        } else {
+            Company company = new Company(companyName, phoneNumber);
+            dbHandler.addCompany(company);
+        }
         Stage stage = (Stage) bntSave.getScene().getWindow();
         stage.close();
     }

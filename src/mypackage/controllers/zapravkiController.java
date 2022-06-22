@@ -75,7 +75,7 @@ public class zapravkiController {
         initDataCompany();
         initData();
 
-        // Додати новий картридж
+        // Додати нову заправку
         btnAdd.setOnAction(event -> {
             openNewScene("/mypackage/views/zapravkiEditForm.fxml");
             try {
@@ -85,11 +85,37 @@ public class zapravkiController {
             }
         });
 
+        // Редагувати заправку
+        btnEdit.setOnAction(event -> {
+            Zapravki4Table zapravki4Table = zapravkiTable.getSelectionModel().getSelectedItem();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mypackage/views/zapravkiEditForm.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            zapravkiEditController zapravkiEditController = loader.getController();
+            try {
+                zapravkiEditController.setZapravki(zapravki4Table);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            zapravkiEditController.editMode = true;
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.getRoot()));
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.showAndWait();
+
+            try {
+                initData();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        });
+
         // Видалити заправку
         btnDelete.setOnAction(event -> {
-            int answer = JOptionPane.showConfirmDialog(null,
-                    "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
-                    JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            deleteZapravki();
         });
 
         // Зформувати звіт
@@ -98,6 +124,8 @@ public class zapravkiController {
         });
     }
 
+
+    // Отримати дані для таблиці заправок
     private void initData() throws SQLException {
         zapravkiData.clear();
         ZapravkiDatabaseHandler handler = new ZapravkiDatabaseHandler();
@@ -151,5 +179,23 @@ public class zapravkiController {
         stage.setScene(new Scene(root));
         stage.initModality(Modality.WINDOW_MODAL);
         stage.showAndWait();
+    }
+
+    private void deleteZapravki() {
+        int answer = JOptionPane.showConfirmDialog(null,
+                "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
+                JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        if (answer == 0) {
+            Zapravki4Table zapravki4Table = zapravkiTable.getSelectionModel().getSelectedItem();
+            int id = zapravki4Table.getId();
+            ZapravkiDatabaseHandler zapravkiDatabaseHandler = new ZapravkiDatabaseHandler();
+            zapravkiDatabaseHandler.deleteZapravki(id);
+            try {
+                initData();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 }

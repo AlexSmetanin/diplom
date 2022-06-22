@@ -82,6 +82,7 @@ public class PrinterController {
             }
             PrinterEditController printerEditController = loader.getController();
             printerEditController.setPrinter(printer4Table);
+            printerEditController.editMode = true;
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.getRoot()));
             stage.initModality(Modality.WINDOW_MODAL);
@@ -95,9 +96,11 @@ public class PrinterController {
         });
 
         btnDelete.setOnAction(event -> {
-            int answer = JOptionPane.showConfirmDialog(null,
-                    "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
-                    JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            try {
+                deletePrinter();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         });
     }
 
@@ -141,5 +144,30 @@ public class PrinterController {
         userColumn.setCellValueFactory(new PropertyValueFactory<Printer4Table, String>("user"));
 
         printerTable.setItems(printerData);
+    }
+
+    private void deletePrinter() throws SQLException {
+        int answer = JOptionPane.showConfirmDialog(null,
+                "Ви дійсно бажаєте вилучити цей запис?", "Вилучення запису",
+                JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        if (answer == 0) {
+            Printer4Table printer4Table = printerTable.getSelectionModel().getSelectedItem();
+            int id = printer4Table.getId();
+            CartridgeDatabaseHandler cartridgeDatabaseHandler = new CartridgeDatabaseHandler();
+            ResultSet rs = cartridgeDatabaseHandler.getCartridgeByPrinterID(id);
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(null,
+                        "Не можна видаляти запис, на який є посилання?", "Помилка!",
+                        JOptionPane.ERROR_MESSAGE);
+            } else {
+                PrinterDatabaseHandler printerDatabaseHandler = new PrinterDatabaseHandler();
+                printerDatabaseHandler.deletePrinter(id);
+                try {
+                    initData();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }

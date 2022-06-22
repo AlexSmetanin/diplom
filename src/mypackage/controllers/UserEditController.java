@@ -14,6 +14,8 @@ import mypackage.User;
 
 public class UserEditController {
     private User user;
+    public static boolean editMode;
+    private Integer id;
 
     @FXML
     private ResourceBundle resources;
@@ -55,7 +57,7 @@ public class UserEditController {
     void initialize() {
 
        bntSave.setOnAction(event ->
-               addNewUser());
+               saveUser());
 
        btnCancel.setOnAction(event -> {
            Stage stage = (Stage) btnCancel.getScene().getWindow();
@@ -80,9 +82,10 @@ public class UserEditController {
             userRoleAdmin.setSelected(false);
             userRoleUser.setSelected(true);
         }
+        id = user.getId();
     }
 
-    private void addNewUser() {
+    private void saveUser() {
         UserDatabaseHandler dbHandler = new UserDatabaseHandler();
         String userName = userFIO.getText();
         String login = userLogin.getText();
@@ -94,8 +97,14 @@ public class UserEditController {
         else
             role = "user";
 
-        User user = new User(login, password, userName, otdel, role);
-        dbHandler.addUser(user);
+        if (editMode) {
+            User user = new User(id, login, password, userName, otdel, role);
+            dbHandler.editUser(user);
+        } else {
+            User user = new User(login, password, userName, otdel, role);
+            dbHandler.addUser(user);
+        }
+
         Stage stage = (Stage) bntSave.getScene().getWindow();
         stage.close();
     }
